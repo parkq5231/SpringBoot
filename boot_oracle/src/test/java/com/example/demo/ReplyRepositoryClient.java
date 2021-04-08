@@ -34,7 +34,7 @@ public class ReplyRepositoryClient {
 	@Test
 	public void 댓글조회() {
 		// jpql
-		List<Reply> list = repository.findAll();
+		List<Reply> list = (List<Reply>) repository.findAll();
 		System.out.println(list);
 	}// end of findAll
 

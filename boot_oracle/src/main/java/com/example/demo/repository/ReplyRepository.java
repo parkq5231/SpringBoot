@@ -2,10 +2,13 @@ package com.example.demo.repository;
 
 import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
 import com.example.demo.domain.Reply;
 
-public interface ReplyRepository extends JpaRepository<Reply, Long> {
-	List<Reply> findByTitle(String title);
+public interface ReplyRepository extends PagingAndSortingRepository<Reply, Long> {
+	
+	 List<Reply> findByTitleLike(String title);
+	 List<Reply> findByTitle(String title);
+
 }
