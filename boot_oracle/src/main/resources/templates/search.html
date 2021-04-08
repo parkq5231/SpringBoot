@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+			</tr>
+		</thead>   
+		<tbody>
+			<tr th:each="sea:${search}">
+				<td><a href="#" th:text="${sea.seq}">번호</a></td>
+				<td><a href="#" th:text="${sea.title}">제목</a></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

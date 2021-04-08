@@ -1,5 +1,7 @@
 package com.example.demo.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,12 @@ public class ReplyServiceImpl implements ReplyService {
 	@Override
 	public Iterable<Reply> selectAll() {
 		return repo.findAll();
+	}
+
+	// 제목으로 조회
+	@Override
+	public List<Reply> findByTitleLike(String title) {
+		return repo.findByTitleLike(title);
 	}
 
 }
